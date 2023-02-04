@@ -256,8 +256,19 @@ var saveTasks = function() {
 
 }
 
+var loadTasks = function() {
+  localStorage.getItem("tasks");
+  console.log(tasks);
+
+  if (tasks === null) {
+    
+  }
+
+}
 
 
 formEl.addEventListener("submit", taskFormHandler);
 pageContentEl.addEventListener("click", taskButtonHandler);
 pageContentEl.addEventListener("change", taskStatusChangeHandler) 
+
+loadTasks()
